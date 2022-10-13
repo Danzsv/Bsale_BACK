@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 
 const port = process.env.port || 3001;
 
-// app.use("/api");
+app.use("/api", require("./routes"));
 
 app.listen(port, () => console.log(`App Ready in port: ${port}`));
 
