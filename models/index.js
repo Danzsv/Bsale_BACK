@@ -1,5 +1,5 @@
 const models = {
-  productsModel: require("./product"),
+  productModel: require("./product"),
   categoriesModel: require("./category"),
 };
 
