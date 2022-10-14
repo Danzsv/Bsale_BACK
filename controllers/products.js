@@ -46,7 +46,7 @@ const getProductById = async (req, res) => {
     if (productId.length === 0) {
       return res.send({ msg: "No existe item con ese id" });
     }
-    return res.status(200).send(productId);
+    return res.status(200).send(productId[0]);
   } catch (error) {
     console.log(error.message);
   }
