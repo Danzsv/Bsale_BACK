@@ -13,7 +13,8 @@ const queryProducts = async () => {
 };
 
 const getAllProducts = async (req, res, next) => {
-  const { name } = req.query;
+  const { name, category } = req.query;
+  console.log(category);
 
   try {
     const results = await queryProducts();
@@ -24,9 +25,20 @@ const getAllProducts = async (req, res, next) => {
       );
       // console.log(productName);
       if (productName.length === 0) {
-        res.status(200).send({ msg: "No existe el producto" });
+        return res.status(200).send({ msg: "No existe el producto" });
       } else {
         return res.status(200).send(productName);
+      }
+    } else if (category) {
+      let categoryProducts = results.filter(
+        (element) => element.name.toLowerCase() === category.toLowerCase()
+      );
+      if (categoryProducts.length === 0) {
+        return res
+          .status(200)
+          .send({ msg: "No hay productos con esa categoría" });
+      } else {
+        return res.status(200).send(categoryProducts);
       }
     } else {
       return res.status(200).send(results);
