@@ -13,10 +13,8 @@ const queryProducts = async () => {
 };
 
 const getAllProducts = async (req, res, next) => {
-  const { name, category } = req.query;
-  console.log(category);
-
   try {
+    const { name, category } = req.query;
     const results = await queryProducts();
 
     if (name) {
@@ -49,8 +47,8 @@ const getAllProducts = async (req, res, next) => {
 };
 
 const getProductById = async (req, res) => {
-  const { id } = req.params;
   try {
+    const { id } = req.params;
     const results = await queryProducts();
 
     let productId = results.filter((element) => element.product_id == id);
