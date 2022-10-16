@@ -195,26 +195,6 @@ En esta ocasión podremos obtener los productos deseados por categoría, donde m
     "category": 5,
     "product_id": 54,
     "product_name": "Papas Fritas Lisas Bolsa Grande"
-  },
-  {
-    "id": 5,
-    "name": "snack",
-    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/papaslisas7271.jpg",
-    "price": 500,
-    "discount": 0,
-    "category": 5,
-    "product_id": 55,
-    "product_name": "Papas Fritas Bolsa Pequeña"
-  },
-  {
-    "id": 5,
-    "name": "snack",
-    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/78028005335657432.jpg",
-    "price": 1990,
-    "discount": 0,
-    "category": 5,
-    "product_id": 56,
-    "product_name": "Papas Fritas Tarro"
   }
 ]
 ```
