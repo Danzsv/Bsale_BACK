@@ -14,9 +14,8 @@ const queryProducts = async () => {
 
 const getAllProducts = async (req, res, next) => {
   try {
-    const { name, category } = req.query;
+    const { name, category, page } = req.query;
     const results = await queryProducts();
-
     if (name) {
       let productName = results.filter((element) =>
         element.product_name.toLowerCase().includes(name.trim().toLowerCase())
@@ -27,7 +26,9 @@ const getAllProducts = async (req, res, next) => {
       } else {
         return res.status(200).send(productName);
       }
-    } else if (category) {
+    }
+
+    if (category) {
       let categoryProducts = results.filter(
         (element) => element.name.toLowerCase() === category.toLowerCase()
       );
@@ -38,9 +39,8 @@ const getAllProducts = async (req, res, next) => {
       } else {
         return res.status(200).send(categoryProducts);
       }
-    } else {
-      return res.status(200).send(results);
     }
+    return res.status(200).send(results);
   } catch (e) {
     console.log(e.message);
   }
