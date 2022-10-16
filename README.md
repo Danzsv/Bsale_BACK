@@ -4,7 +4,7 @@
 
 ## Enunciado
 
-La idea general de esta API Rest es poder interactuar con una base de datos, proporcionada en esta ocasión en MySQL. Y información de los productos y categorías para un modelo de un e-commerce.
+La idea general de esta API Rest es poder interactuar con una base de datos, proporcionada en esta ocasión en MySQL. Y obtener información de los productos y categorías para un modelo de un e-commerce.
 
 ## Contenido
 
@@ -12,7 +12,7 @@ Back-End controlador de productos de abarrote y categorías de productos.
 El proyecto esta realizado en:
 
 - [Node.js](https://nodejs.org/es/)
-- [express.js](https://expressjs.com/es/)
+- [Express.js](https://expressjs.com/es/)
 - [MySQL](https://www.mysql.com)
 - [Sequelize](https://sequelize.org)
 
@@ -79,7 +79,7 @@ MYSQL SUCCESSFUL CONNECTION
 `GET /api/products`
 
 ```bash
-http://localhost:3001/products
+http://localhost:3001/api/products
 ```
 
 ### Response
@@ -128,7 +128,7 @@ En este ejemplo obtenemos una lista de productos, en forma de un array con vario
 `GET /api/products?name="value"`
 
 ```bash
-http://localhost:3001/products?name="value"
+http://localhost:3001/api/products?name="value"
 ```
 
 ### Response
@@ -157,7 +157,7 @@ En este ejemplo obtenemos una lista de productos que coincidan con valor ingrese
 `GET /api/products?category="value"`
 
 ```bash
-http://localhost:3001/products?category="value"
+http://localhost:3001/api/products?category="value"
 ```
 
 ### Response
@@ -206,7 +206,7 @@ En esta ocasión podremos obtener los productos deseados por categoría, donde m
 `GET /api/categories`
 
 ```bash
-http://localhost:3001/categories"
+http://localhost:3001/api/categories"
 ```
 
 ### Response
