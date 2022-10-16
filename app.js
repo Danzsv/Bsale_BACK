@@ -24,7 +24,7 @@ const port = process.env.port || 3001;
 
 app.use("/api", require("./routes"));
 
-app.listen(port, () => console.log(`App Ready in port: ${port}`));
+app.listen(port, () => console.log(`App Ready on port: ${port}`));
 
 dbConnectMySql();
 // const mysql = require("mysql");
