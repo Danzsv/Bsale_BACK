@@ -8,7 +8,7 @@ La idea general de esta API Rest es poder interactuar con una base de datos, pro
 
 ## Contenido
 
-Back-End controlador de productos de abarrote y categorías de productos.
+Back-End controlador de productos de un ecommerce y categorías de productos.
 El proyecto esta realizado en:
 
 - [Node.js](https://nodejs.org/es/)
