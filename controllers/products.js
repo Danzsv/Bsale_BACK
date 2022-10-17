@@ -40,6 +40,14 @@ const getAllProducts = async (req, res, next) => {
         return res.status(200).send(categoryProducts);
       }
     }
+    if (page) {
+      const productsPorPage = 10;
+      const indexOfLast = page * productsPorPage;
+      const indexOfFirst = indexOfLast - productsPorPage;
+      const currentProducts = results.slice(indexOfFirst, indexOfLast);
+      return res.status(200).send(currentProducts);
+    }
+
     return res.status(200).send(results);
   } catch (e) {
     console.log(e.message);
