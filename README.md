@@ -121,6 +121,14 @@ En este ejemplo obtenemos una lista de productos, en forma de un array con vario
 ]
 ```
 
+- `name`: nombre de la categoría correspondiente al producto
+- `url_image`: url de la imagen del producto, subida a un servicio en la nube
+- `price`: precio del producto
+- `discount`: porcentaje de descuento del producto
+- `category` : id de la categoría correspondiente al producto
+- `product_id`: id del producto
+- `product_name`: nombre del producto
+
 ## Obtener productos por nombre
 
 ### Request
@@ -149,6 +157,14 @@ En este ejemplo obtenemos una lista de productos que coincidan con valor ingrese
   }
 ]
 ```
+
+- `name`: nombre de la categoría correspondiente al producto
+- `url_image`: url de la imagen del producto, subida a un servicio en la nube
+- `price`: precio del producto
+- `discount`: porcentaje de descuento del producto
+- `category` : id de la categoría correspondiente al producto
+- `product_id`: id del producto
+- `product_name`: nombre del producto
 
 ## Obtener productos por categoría
 
@@ -199,6 +215,141 @@ En esta ocasión podremos obtener los productos deseados por categoría, donde m
 ]
 ```
 
+- `name`: nombre de la categoría correspondiente al producto
+- `url_image`: url de la imagen del producto, subida a un servicio en la nube
+- `price`: precio del producto
+- `discount`: porcentaje de descuento del producto
+- `category` : id de la categoría correspondiente al producto
+- `product_id`: id del producto
+- `product_name`: nombre del producto
+
+## Obtener productos por páginas
+
+### Request
+
+`GET /api/products?page="value"`
+
+```bash
+http://localhost:3001/api/products?page="value"
+```
+
+### Response
+
+Tambiém podremos ordenar los productos deseados por páginas, donde me traera únicamente los productos de la página correspondiente donde "page=value", en este ejemplo el valor de `value` es `3`.
+
+```bash
+[
+  {
+    "id": 2,
+    "name": "pisco",
+    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/mistral409215.jpg",
+    "price": 4990,
+    "discount": 20,
+    "category": 2,
+    "product_id": 20,
+    "product_name": "PISCO MISTRAL 40º "
+  },
+  {
+    "id": 2,
+    "name": "pisco",
+    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/rrr359305.jpg",
+    "price": 4590,
+    "discount": 20,
+    "category": 2,
+    "product_id": 21,
+    "product_name": "PISCO TRES ERRES 35º"
+  },
+  {
+    "id": 2,
+    "name": "pisco",
+    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/rrr409319.jpg",
+    "price": 4990,
+    "discount": 20,
+    "category": 2,
+    "product_id": 22,
+    "product_name": "PISCO TRES ERRES 40º"
+  },
+  {
+    "id": 2,
+    "name": "pisco",
+    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/358978.jpg",
+    "price": 4990,
+    "discount": 0,
+    "category": 2,
+    "product_id": 87,
+    "product_name": "PISCO MISTRAL 35°"
+  },
+  {
+    "id": 2,
+    "name": "pisco",
+    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/grannobel9104.jpg",
+    "price": 19900,
+    "discount": 0,
+    "category": 2,
+    "product_id": 88,
+    "product_name": "PISCO MISTRAL GRAN NOBEL 40°"
+  },
+  {
+    "id": 2,
+    "name": "pisco",
+    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/409346.jpg",
+    "price": 4990,
+    "discount": 0,
+    "category": 2,
+    "product_id": 89,
+    "product_name": "PISCO MISTRAL 40°"
+  },
+  {
+    "id": 2,
+    "name": "pisco",
+    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/469463.jpg",
+    "price": 7890,
+    "discount": 0,
+    "category": 2,
+    "product_id": 90,
+    "product_name": "PISCO MISTRAL 46°"
+  },
+  {
+    "id": 2,
+    "name": "pisco",
+    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/nobel409551.jpg",
+    "price": 19990,
+    "discount": 0,
+    "category": 2,
+    "product_id": 91,
+    "product_name": "PISCO MISTRAL NOBEL 40°"
+  },
+  {
+    "id": 2,
+    "name": "pisco",
+    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/nobelanejado9639.jpg",
+    "price": 15990,
+    "discount": 15,
+    "category": 2,
+    "product_id": 92,
+    "product_name": "PISCO MISTRAL NOBEL 46"
+  },
+  {
+    "id": 3,
+    "name": "ron",
+    "url_image": "https://dojiw2m9tvv09.cloudfront.net/11132/product/bacardi9450.jpg",
+    "price": 4990,
+    "discount": 0,
+    "category": 3,
+    "product_id": 23,
+    "product_name": "RON BACARDI AÑEJO"
+  }
+]
+```
+
+- `name`: nombre de la categoría correspondiente al producto
+- `url_image`: url de la imagen del producto, subida a un servicio en la nube
+- `price`: precio del producto
+- `discount`: porcentaje de descuento del producto
+- `category` : id de la categoría correspondiente al producto
+- `product_id`: id del producto
+- `product_name`: nombre del producto
+
 ## Obtener listado de categorías
 
 ### Request
@@ -245,3 +396,6 @@ Aquí podremos obtener una lista de todas las categorías, representado en un ar
   }
 ]
 ```
+
+- `id` : id de la categoría
+- `name`: nombre de la categoría
